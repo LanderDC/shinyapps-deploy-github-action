@@ -46,7 +46,6 @@ appFiles <- optional("INPUT_APPFILES")
 appFileManifest <- optional("INPUT_APPFILEMANIFEST")
 appTitle <- optional("INPUT_APPTITLE")
 logLevel <- optional("INPUT_LOGLEVEL")
-forceUpdate <- optional("INPUT_FORCEUPDATE")
 
 # process appFiles
 if (!is.null(appFiles)) {
@@ -66,5 +65,5 @@ rsconnect::deployApp(
   appName = appName,
   appTitle = appTitle,
   account = accountName,
-  forceUpdate = forceUpdate
+  forceUpdate = T
 )
